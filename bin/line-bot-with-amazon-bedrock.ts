@@ -1,21 +1,12 @@
-#!/usr/bin/env node
-import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { LineBotWithAmazonBedrockStack } from '../lib/line-bot-with-amazon-bedrock-stack';
+import { Stack } from '../lib/stack';
+import { ParameterStack } from '../lib/parameter-stack';
 
 const app = new cdk.App();
-new LineBotWithAmazonBedrockStack(app, 'LineBotWithAmazonBedrockStack', {
-  /* If you don't specify 'env', this stack will be environment-agnostic.
-   * Account/Region-dependent features and context lookups will not work,
-   * but a single synthesized template can be deployed anywhere. */
 
-  /* Uncomment the next line to specialize this stack for the AWS Account
-   * and Region that are implied by the current CLI configuration. */
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+const parameterStack = new ParameterStack(app, 'LineBotWithAmazonBedrockParameter');
 
-  /* Uncomment the next line if you know exactly what Account and Region you
-   * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
+const mainStack = new Stack(app, 'LineBotWithAmazonBedrock');
+mainStack.addDependency(parameterStack);
 
-  /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
-});
+// cdk.Tags.of(app).add('tag-name', 'tag-value');
