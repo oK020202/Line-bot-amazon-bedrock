@@ -60,7 +60,7 @@ Add `"line-bot-with-amazon-bedrock": {...}` the following:
 ### 5. Clone this repository
 
 ```sh
-git clone https://
+git clone https://github.com/msysh/aws-sample-line-bot-with-amazon-bedrock.git
 ```
 
 ### 6. Provision AWS resources
