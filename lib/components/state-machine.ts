@@ -301,7 +301,7 @@ export class StateMachine {
         level: sfn.LogLevel.ERROR,
       },
       timeout: cdk.Duration.seconds(60),
-      tracingEnabled: true,
+      tracingEnabled: false,
       definitionBody: sfn.DefinitionBody.fromChainable(
         parallelPrepare
       ),
