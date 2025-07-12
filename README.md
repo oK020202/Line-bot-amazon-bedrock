@@ -1,6 +1,6 @@
 # LINE AI Chatbot with Amazon Bedrock
 
-[日本語の情報 (for Japanese)](https://blog.msysh.me/posts/2024/01/line_bot_with_amazon_bedrock.html)
+[日本語の情報 (for Japanese)]
 
 This project is an AI Chat Bot using Amazon Bedrock for LINE (LINE is the popular messaging app in Japan).
 
@@ -12,17 +12,17 @@ It features a serverless chatbot implemented in less code using Bedrock, AWS' ge
 
 ## Pre-requirement
 
-First, make Anthropic's Claude available through Amazon Bedrock's "Model access" in the AWS Management Console. See the [documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-access.html) for details.
+First, make Anthropic's Claude available through Amazon Bedrock's "Model access" in the AWS Management Console. See the [documentation] for details.
 
-This project are provisioned by the AWS Cloud Development Kit (CDK). If you have not installed the CDK, first install it by referring to the [documents](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html).
+This project are provisioned by the AWS Cloud Development Kit (CDK). If you have not installed the CDK, first install it by referring to the [documents].
 
-Then, since it is a LINE bot, it is necessary to create a channel used the LINE Messaging API. You can create that channel after creating a provider in the [LINE Developers console](https://developers.line.biz/console/).
+Then, since it is a LINE bot, it is necessary to create a channel used the LINE Messaging API. You can create that channel after creating a provider in the [LINE Developers console].
 
 ## How to setup
 
 ### 1. Create LINE Channel
 
-In the [LINE Developers console](https://developers.line.biz/console/), create a provider and create a channel used the Messaging API.
+In the [LINE Developers console], create a provider and create a channel used the Messaging API.
 
 ![Create channel used the Messaging API](./doc/images/create-channel-used-messaging-api.png)
 
